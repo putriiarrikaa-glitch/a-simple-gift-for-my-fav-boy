@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap');
+
+:root {
+  --green:#94A466; --deep:#273426; --cream:#f8f5e9; --paper:#fffdf6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--green);color:var(--deep);
+  font-family:'DM Sans',sans-serif;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;
+  background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:8px 8px;
+}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}
+.heart{position:absolute;bottom:-30px;font-size:18px;animation:rise linear forwards;opacity:.8}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+
+.page{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:24px 15px}
+.card{
+  width:min(680px,100%);background:rgba(255,253,246,.96);
+  border-radius:30px;overflow:hidden;box-shadow:0 28px 90px #26332640;
+}
+.hero{min-height:86vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:45px 25px}
+.mini{font-size:10px;letter-spacing:.25em;text-transform:uppercase;opacity:.55}
+h1,h2,.quote{font-family:'Cormorant Garamond',serif;font-weight:500}
+h1{font-size:clamp(58px,16vw,100px);line-height:.82;margin:24px 0}
+.subtitle{font-size:13px;line-height:1.9;max-width:430px;margin:auto;opacity:.72}
+.main-heart{font-size:27px;display:inline-block;animation:beat 1.7s infinite}
+@keyframes beat{50%{transform:scale(1.22)}}
+.open{
+  margin:34px auto 0;border:0;background:var(--deep);color:var(--cream);
+  padding:15px 25px;border-radius:999px;font:500 12px 'DM Sans';
+  cursor:pointer;transition:.25s;box-shadow:0 8px 25px #26332625;
+}
+.open:hover{transform:translateY(-3px)}
+.section{padding:52px 28px;border-top:1px solid #27342616}
+.quote{font-size:34px;line-height:1.15;text-align:center;margin:18px auto;max-width:540px}
+.text{max-width:535px;margin:25px auto 0;font-size:13px;line-height:2;opacity:.78}
+.wishes{display:grid;gap:12px;max-width:530px;margin:28px auto 0}
+.wish{background:#e7ead7;border-radius:18px;padding:18px 19px;font-size:12px;line-height:1.65}
+.wish b{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;margin-bottom:2px}
+.final{text-align:center;padding:55px 25px 70px}
+.final h2{font-size:48px;margin:12px 0}
+.music{
+  position:fixed;right:15px;bottom:15px;z-index:20;border:1px solid #27342620;
+  background:var(--cream);color:var(--deep);border-radius:999px;padding:11px 15px;
+  font:500 11px 'DM Sans';box-shadow:0 10px 30px #26332630;cursor:pointer;
+}
+.dot{display:inline-block;width:7px;height:7px;background:var(--deep);border-radius:50%;margin-right:7px;animation:pulse 1.3s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.spotify-box{
+  position:fixed;right:14px;bottom:14px;z-index:20;
+  width:min(360px,calc(100vw - 28px));
+  background:rgba(248,245,233,.96);border-radius:18px;
+  padding:9px;box-shadow:0 12px 35px #26332635;
+  border:1px solid #27342618;
+}
+.spotify-title{
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  opacity:.62;padding:2px 7px 7px;
+}
+.spotify-box iframe{display:block;border-radius:12px}
+#musicFrame{position:absolute;width:1px;height:1px;opacity:.01;left:-10px;top:-10px}
+@media(max-width:480px){.section{padding:44px 22px}.quote{font-size:30px}}
+</style>
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<div class="page">
+<main class="card">
+
+<section class="hero">
+  <div class="mini">a little birthday letter</div>
+  <h1>Happy Birthday<br>My Love <span class="main-heart">♡</span></h1>
+  <p class="subtitle">I made something simple for you. It is not an expensive gift, just a few words that I hope can make your birthday feel a little more special.</p>
+  <button class="open" onclick="openLetter()">open my letter ♡</button>
+</section>
+
+<section class="section" id="letter">
+  <div class="mini" style="text-align:center">dear you</div>
+  <div class="quote">“Among all the people in this world, I’m glad our paths crossed.”</div>
+  <p class="text">
+    Happy birthday, may this year become one of the most beautiful chapters of your life. I love you so much, Akbar Dera Saputra.
+    <br><br>
+    On this special day, I just want to wish that you are always surrounded by good things.
+    May everything you are working hard for slowly find its way to you.
+    May you always have many reasons to smile, many places to call home,
+    dan banyak orang yang benar-benar menghargai keberadaanmu.
+    <br><br>
+    If life ever feels heavy, I hope you remember how much you have already made it through
+    begitu banyak hal sampai sejauh ini. Jadi, jangan lupa untuk bangga sama diri sendiri.
+    <br><br>
+    And for this new year of your life... may there be many more beautiful stories for you to keep.
+  </p>
+</section>
+
+<section class="section">
+  <div class="mini" style="text-align:center">my wishes for you</div>
+  <div class="wishes">
+    <div class="wish"><b>♡ be happy</b>May you find happiness even in the smallest things.</div>
+    <div class="wish"><b>♡ stay healthy</b>May your body and heart always be taken care of.</div>
+    <div class="wish"><b>♡ chase your dreams</b>May all the dreams you have slowly come true.</div>
+    <div class="wish"><b>♡ keep being you</b>Never lose the parts of you that make you special.</div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="mini">one last thing</div>
+  <h2>I'm glad I met you.</h2>
+  <p class="text">Happy birthday. May this year become one of the most beautiful chapters of your life.</p>
+  <p style="margin-top:30px;font-family:'Cormorant Garamond',serif;font-size:25px">with love, ♡</p>
+</section>
+
+</main>
+</div>
+
+<div class="spotify-box">
+  <div class="spotify-title">♫ music for you</div>
+  <iframe
+    src="https://open.spotify.com/embed/track/4GfK1qOF3uBWidbPlTCQRL?utm_source=generator&theme=0"
+    width="100%" height="80" frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"></iframe>
+</div>
+
+<script>
+function hearts(){
+  const box=document.getElementById('hearts');
+  const h=document.createElement('span');
+  h.className='heart';
+  h.textContent=['♡','♥','˚♡','♡'][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(12+Math.random()*18)+'px';
+  h.style.animationDuration=(5+Math.random()*5)+'s';
+  box.appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+}
+setInterval(hearts,650);
+
+function openLetter(){
+  document.getElementById('letter').scrollIntoView({behavior:'smooth'});
+  // Spotify requires the visitor to press play in its player.
+}
+</script>
+</body>
+</html>
